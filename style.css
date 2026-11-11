@@ -1,3 +1,4 @@
+/* --- CONFIGURACIÓN MÓVIL OPTIMIZADA --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,17 +9,17 @@
 body {
     background-color: #060913;
     color: #e2e8f0;
-    line-height: 1.7;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
 }
 
-/* Banner Principal */
+/* Banner Principal adaptado a pantallas táctiles */
 .main-banner-container {
     width: 100%;
     background-color: #03060c;
-    border-bottom: 3px solid #1e3a8a;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid #1e3a8a;
     overflow: hidden;
-    max-height: 380px;
+    max-height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,32 +27,26 @@ body {
 
 .main-banner-img {
     width: 100%;
-    max-height: 380px;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* Grid Principal */
-.page-container {
-    max-width: 1280px;
-    margin: 35px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 2.3fr 1fr;
-    gap: 30px;
+/* Contenedor fluido para celulares */
+.mobile-container {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-@media (max-width: 968px) {
-    .page-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Tarjeta de Artículo */
+/* Tarjeta Principal */
 .news-card {
     background-color: #0f172a;
-    border-radius: 14px;
-    padding: 35px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     border: 1px solid #1e293b;
 }
 
@@ -59,19 +54,18 @@ body {
 .editor-profile-box {
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #1e293b;
 }
 
 .editor-avatar {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #3b82f6;
-    margin-right: 15px;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+    margin-right: 12px;
 }
 
 .editor-info {
@@ -80,85 +74,82 @@ body {
 }
 
 .editor-name {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #f8fafc;
 }
 
 .editor-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #38bdf8;
-    font-weight: 500;
 }
 
 .verified-icon {
     color: #3b82f6;
-    margin-right: 3px;
 }
 
 .article-main-title {
-    font-size: 2rem;
+    font-size: 1.45rem;
     color: #ffffff;
     font-weight: 800;
-    margin-bottom: 30px;
-    line-height: 1.35;
-    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+    line-height: 1.3;
 }
 
-/* Bloques de Texto del Ensayo */
+/* Bloques de Ensayo */
 .essay-content-block {
     background-color: #111e38;
-    padding: 28px;
-    border-radius: 10px;
-    border-left: 5px solid #3b82f6;
-    border: 1px solid #1e293b;
-    border-left-width: 5px;
-    margin-bottom: 25px;
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    border-top: 1px solid #1e293b;
+    border-right: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+    margin-bottom: 20px;
 }
 
 .essay-content-block h2 {
     color: #f8fafc;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
     font-weight: 700;
 }
 
 .essay-content-block p, 
 .essay-content-block li {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #cbd5e1;
-    margin-bottom: 14px;
-    text-align: justify;
+    margin-bottom: 12px;
+    text-align: left;
 }
 
-.essay-content-block ul, .essay-content-block ol {
-    padding-left: 20px;
+.essay-content-block ol {
+    padding-left: 18px;
 }
 
-/* Sección de Video de YouTube */
+/* Sección de Video para móviles */
 .video-presentation-section {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     background-color: #090e1a;
-    padding: 22px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 8px;
     border: 1px solid #1e3a8a;
 }
 
 .video-intro-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #38bdf8;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .video-frame-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    padding-top: 56.25%; /* Relación 16:9 estándar móvil */
     background: #000;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .video-frame-container iframe {
@@ -170,83 +161,69 @@ body {
     border: none;
 }
 
-/* Bloque de Síntesis */
 .synthesis-headline {
     color: #94a3b8;
-    margin-bottom: 15px;
-    font-size: 1.05rem;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
 }
 
-/* Barra Lateral (Sidebar) */
+/* Sidebar adaptada debajo del contenido principal */
 .sidebar-container {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
 
 .sidebar-widget {
     background-color: #0f172a;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     border: 1px solid #1e293b;
-}
-
-.banner-widget {
-    display: flex;
-    justify-content: center;
-    background: #000;
 }
 
 .sidebar-world-banner {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .newsletter-widget {
-    padding: 25px;
+    padding: 20px;
     text-align: center;
 }
 
 .newsletter-widget h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: #f8fafc;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .newsletter-widget p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #94a3b8;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .newsletter-action-btn {
     background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: #ffffff;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 6px;
     font-weight: 600;
+    font-size: 0.95rem;
     cursor: pointer;
     width: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-}
-
-.newsletter-action-btn:hover {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af);
-    transform: translateY(-1px);
 }
 
 /* Pie de página */
 .site-footer {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background-color: #03060c;
     color: #64748b;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border-top: 1px solid #1e293b;
-    margin-top: 50px;
+    margin-top: 20px;
 }
